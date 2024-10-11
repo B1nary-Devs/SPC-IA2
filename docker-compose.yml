@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  ia:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    networks:
+      - ia-network
+
+networks:
+  ia-network:
+    driver: bridge
