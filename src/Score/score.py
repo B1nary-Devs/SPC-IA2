@@ -18,7 +18,7 @@ def model_score(total_canceladas, total_ativas, total_finalizadas, total_monetar
     df = pd.DataFrame(data)
 
     # Aplicar a transformação logarítmica ao valor_total
-    df['valor_log'] = np.log1p(df['total_monetario'])
+    df['total_monetario'] = np.log1p(df['total_monetario'])
 
     # Fazer a previsão do score para esses novos dados
     predicted_score = model.predict(df)
@@ -28,3 +28,4 @@ def model_score(total_canceladas, total_ativas, total_finalizadas, total_monetar
 
     return predicted_score
 
+model_score(5,10,3, 10000)

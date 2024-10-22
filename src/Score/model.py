@@ -1,15 +1,15 @@
-from Score.tratamento_dados import processar_dados
+from tratamento_dados import processar_dados
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 import joblib
 
 def model_randon_forest():
-    file_input = 'table_values_csv'
+    file_input = 'table_values_csv.csv'
     file = processar_dados(file_input)
 
     # Definindo as variáveis preditoras (features) e a variável alvo (target)
-    X = file[['total_canceladas', 'total_ativas', 'total_finalizadas', 'valor_log']]
+    X = file[['total_canceladas', 'total_ativas', 'total_finalizadas', 'total_monetario']]
     y = file['score_percentage'] # score_percentage
 
     # Separar os dados em conjuntos de treino e teste (80% treino, 20% teste)
@@ -33,3 +33,4 @@ def model_randon_forest():
     joblib.dump(rf_model, 'modelo_score.pkl')
 
 
+model_randon_forest()

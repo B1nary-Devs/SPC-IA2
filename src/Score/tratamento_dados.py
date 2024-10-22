@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import StandardScaler
 
 def processar_dados(file_input):
     # Lê e trata os dados
@@ -111,11 +110,6 @@ def agrupamento_endosser(df):
     df_endorser = df_endorser[~df_endorser['document_number_y'].isin(top_1_endorser_f['document_number_y'])]
     df_endorser = df_endorser[~df_endorser['document_number_y'].isin(top_1_endorser_v['document_number_y'])]
 
-    top_1_payer_c = df_endorser.nlargest(1, 'total_canceladas_endorser')
-    top_1_payer_a = df_endorser.nlargest(1, 'total_ativas_endorser')
-    top_1_payer_f = df_endorser.nlargest(1, 'total_finalizadas_endorser')
-    top_1_payer_v = df_endorser.nlargest(1, 'total_valor_endorser')
-
     return df_endorser
 
 
@@ -133,13 +127,13 @@ def normalizacao_score(df):
 
     # Valor Logarizado
     # Aplicar a transformação logarítmica ao valor_total
-    df_media_desvio['valor_log'] = np.log1p(df_media_desvio['total_valor'])
+    df_media_desvio['total_monetario'] = np.log1p(df_media_desvio['total_valor'])
 
     # # SCORE Logarizado
     df_media_desvio['score'] = (
         ((df_media_desvio['total_finalizadas'] * 0.77) +    # Peso 77% para finalizadas
         (df_media_desvio['total_ativas'] * 0.015) +         # Peso 1.5% para ativas
-        (df_media_desvio['valor_log'] * 0.27)) -            # Peso 27% para valor normalizado
+        (df_media_desvio['total_monetario'] * 0.27)) -            # Peso 27% para valor normalizado
         (df_media_desvio['total_canceladas'] * 0.10)        # Peso 10% para canceladas
     )
 
