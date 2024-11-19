@@ -1,8 +1,13 @@
 # %%
 import pandas as pd
+import numpy as np
+import folium
+import plotly.express as px
 import matplotlib.pyplot as plt
+import matplotlib.colors
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
+from folium.plugins import MarkerCluster
 
 # %%
 # carregar os dados
@@ -15,9 +20,30 @@ if df.isnull().values.any():
     df = df.dropna()
 
 # %%
-# rodar kmeans
+# Normalizando as variáveis para garantir que todas tenham a mesma escala
+scaler = StandardScaler()
+df_scaled = scaler.fit_transform(df[['latitude', 'longitude', 'total_duplicatas']])
+
+# %%
+# Método do Cotovelo: Calcular a inércia para diferentes valores de k
+inertia = []
+for k in range(1, 11):  # Testando de 1 a 10 clusters
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    kmeans.fit(df_scaled)
+    inertia.append(kmeans.inertia_)
+
+# Plotando o gráfico do método do cotovelo
+plt.figure(figsize=(8, 6))
+plt.plot(range(1, 11), inertia, marker='o', linestyle='--')
+plt.title('Método do Cotovelo')
+plt.xlabel('Número de Clusters (k)')
+plt.ylabel('Inércia')
+plt.show()
+
+# %%
+# Escolher o número de clusters baseado no cotovelo (por exemplo, k=3)
 kmeans = KMeans(n_clusters=3, random_state=42)
-df['Cluster'] = kmeans.fit_predict(df[['latitude', 'longitude', 'total_duplicatas']])
+df['Cluster'] = kmeans.fit_predict(df_scaled)
 
 print(df[['sigla_estado', 'Cluster']])
 
@@ -30,97 +56,58 @@ dff = pd.read_csv('data/estado_clusters.csv')
 dff.head(10)
 
 # %%
-# Plotar os clusters em um gráfico de dispersão
-plt.figure(figsize=(10, 6))
+# Transformação logarítmica no total de duplicatas para evitar bolhas muito pequenas
+df['log_total_duplicatas'] = np.log(df['total_duplicatas'] + 1)  # Adiciona 1 para evitar log(0)
 
-# Scatter plot usando latitude e longitude
-scatter = plt.scatter(
-    df['longitude'],
-    df['latitude'],
-    c=df['Cluster'],  # Coluna de clusters define as cores
-    cmap='viridis',  # Colormap para os clusters
-    s=df['total_duplicatas'],  # Tamanho dos pontos proporcional ao total de duplicatas
-    alpha=0.8  # Transparência para melhor visualização
-)
+# Criar o mapa centralizado no Brasil
+m = folium.Map(location=[-14.235, -51.925], zoom_start=4)
 
-# Adicionar rótulos para os estados
-for i, row in df.iterrows():
-    plt.text(
-        row['longitude'], 
-        row['latitude'], 
-        row['sigla_estado'], 
-        fontsize=9, 
-        ha='right'
-    )
+# Adicionar a camada de satélite utilizando o provedor Esri
+folium.TileLayer(
+    'Esri.WorldImagery',  # Usando a camada de satélite do Esri
+    name='Esri Satellite with Labels',
+    overlay=False,  # A camada de satélite será sobreposta ao mapa
+    control=True
+).add_to(m)
 
-# Configurações do gráfico
-plt.colorbar(scatter, label="Cluster")  # Barra de cores para os clusters
-plt.title("Agrupamento de Estados por Geolocalização e Total de Duplicatas", fontsize=14)
-plt.xlabel("Longitude", fontsize=12)
-plt.ylabel("Latitude", fontsize=12)
-plt.grid(True)
-plt.show()
+# Adicionar a camada padrão do mapa (CartoDB positron)
+folium.TileLayer(
+    'Esri.WorldStreetMap',  # Usando o estilo de mapa padrão CartoDB
+    name='World StreetMap',
+    overlay=True,  # A camada padrão será sobreposta também
+    control=True
+).add_to(m)
 
-# %%
-from mpl_toolkits import mplot3d
-import matplotlib.pyplot as plt
+# Criar o agrupamento de marcadores
+marker_cluster = MarkerCluster().add_to(m)
 
-# %%
-# Atribuindo cores aos clusters
-colors = ['#5DF534', '#425B26', '#151716', '#876E03', '#E8CECF', '#023411', '#042E54', '#2572D3', '#FD0D0C', '#169C90']
-df['color'] = df['Cluster'].map({i: colors[i] for i in range(len(colors))})
+# Gerar cores únicas para cada estado utilizando matplotlib
+estado_colors = {estado: plt.cm.get_cmap("tab10")(i) for i, estado in enumerate(df['sigla_estado'].unique())}
 
-# Criando a figura 3D
-fig = plt.figure(figsize=(10, 7))
-ax = plt.axes(projection="3d")
-
-# Colunas para o gráfico 3D
-x_column = 'longitude'  # Coluna correspondente ao eixo X
-y_column = 'latitude'   # Coluna correspondente ao eixo Y
-z_column = 'total_duplicatas'  # Coluna correspondente ao eixo Z
-
-# Criando o gráfico de dispersão 3D
-scatter = ax.scatter3D(
-    df[x_column],
-    df[y_column],
-    df[z_column],
-    c=df['color'],  # Cores baseadas no cluster
-    alpha=0.8,      # Transparência
-    s=50            # Tamanho dos pontos
-)
-
-# Configurando os rótulos dos eixos
-ax.set_xlabel('Longitude')
-ax.set_ylabel('Latitude')
-ax.set_zlabel('Total de Duplicatas')
-
-# Adicionando título
-plt.title('Clusters Gerados pelo K-means')
-
-# Exibindo o gráfico
-plt.show()
-
-# %%
-import folium
-import pandas as pd
-
-# %%
-# Criar um mapa centralizado no Brasil
-mapa = folium.Map(location=[-14.2350, -51.9253], zoom_start=4)
-
-# Adicionar marcadores para cada estado
-for _, row in df.iterrows():
+# Adicionar os pontos (bolhas) no mapa
+for idx, row in df.iterrows():
+    estado = row['sigla_estado']
+    
+    # Obter a cor do estado
+    color = estado_colors[estado]
+    hex_color = matplotlib.colors.rgb2hex(color)  # Converter para formato hex
+    
+    # Adicionar a bolinha com tooltip (informação visível ao passar o mouse)
     folium.CircleMarker(
         location=[row['latitude'], row['longitude']],
-        radius=row['total_duplicatas'] / 250,  # Escalar o tamanho
-        popup=f"{row['sigla_estado']}: {row['total_duplicatas']} duplicatas",
-        color='blue',
+        radius=row['log_total_duplicatas'] * 2,  # Ajustando o tamanho com base no valor logarítmico
+        color=hex_color,
         fill=True,
-        fill_color='blue'
-    ).add_to(mapa)
+        fill_color=hex_color,
+        fill_opacity=0.6,
+        tooltip=f"Estado: {estado}<br>Total de Duplicatas: {row['total_duplicatas']}"  # Exibe total de duplicatas ao passar o mouse
+    ).add_to(marker_cluster)
 
-# Salvar o mapa como arquivo HTML ou exibir no notebook
-mapa.save("mapa_interativo.html")
-mapa
+# Adicionar o controle de camadas para alternar entre o satélite e o mapa padrão
+folium.LayerControl().add_to(m)
 
+m.save("mapa_interativo.html")
+
+# Exibir o mapa no Jupyter
+m
 # %%
