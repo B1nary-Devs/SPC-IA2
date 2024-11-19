@@ -40,7 +40,6 @@ def optimal_number_of_clusters(wcss):
 
 inertia = calculate_wcss(df_scaled)
 
-# Visualizando o método do cotovelo
 plt.figure(figsize=(8, 6))
 plt.plot(range(1, 11), inertia, marker='o', linestyle='--')
 plt.title('Método do Cotovelo')
@@ -52,7 +51,6 @@ n_clusters = optimal_number_of_clusters(inertia)
 print(f"Número ótimo de clusters: {n_clusters}")
 
 # %%
-# Aplicar KMeans com o número ótimo de clusters
 kmeans = KMeans(n_clusters=n_clusters, random_state=42)
 df['Cluster'] = kmeans.fit_predict(df_scaled)
 
@@ -64,7 +62,7 @@ df.to_csv(novo_arquivo_csv, index=False)
 
 # %%
 dff = pd.read_csv('data/estado_clusters.csv')
-dff.head(23)
+dff.head(27)
 
 # %%
 # 
