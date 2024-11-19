@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_54003dc5d185eb401b0214d710a1bfa1 {
+                #map_cf4eb3e6a535f66c1b3e66399f1ba611 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -42,14 +42,158 @@
 <body>
     
     
-            <div class="folium-map" id="map_54003dc5d185eb401b0214d710a1bfa1" ></div>
+<div style="position: fixed; 
+            top: 115px; right: 10px; width: 100px; height: auto; 
+            background-color: white; z-index:9999; font-size:8px; 
+            border:1px solid grey; padding: 5px; border-radius: 5px;">
+<h4 style="margin:0; font-size:12px; text-align:center;">Legenda</h4>
+<hr style="margin:5px 0; border:none; border-top:1px solid #ccc;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#F0FFF0; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">AC</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#FFF0F5; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">AL</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#EE82EE; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">AP</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#FF69B4; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">AM</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#8B4513; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">BA</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#BA55D3; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">CE</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#808000; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">DF</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#800080; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">ES</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#FF4500; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">GO</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#CD853F; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">MA</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#00FF00; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">MT</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#FFFF00; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">MS</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#6A5ACD; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">MG</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#C71585; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">PA</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#DC143C; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">PB</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#FAFAD2; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">PR</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#FF1493; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">PE</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#F0E68C; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">PI</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#800000; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">RJ</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#FF8C00; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">RN</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#00FA9A; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">RS</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#7FFFD4; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">RO</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#8A2BE2; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">RR</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#00FFFF; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">SC</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#6A5ACD; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">SE</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#191970; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">SP</span>
+    </div>
+    
+    <div style="width: 48%; margin-bottom: 5px;">
+        <i style="background:#0000FF; width: 10px; height: 10px; float:left; margin-right: 5px; border-radius: 50%;"></i>
+        <span style="line-height:10px; font-size:10px;">TO</span>
+    </div>
+    </div></div>
+    
+            <div class="folium-map" id="map_cf4eb3e6a535f66c1b3e66399f1ba611" ></div>
         
 </body>
 <script>
     
     
-            var map_54003dc5d185eb401b0214d710a1bfa1 = L.map(
-                "map_54003dc5d185eb401b0214d710a1bfa1",
+            var map_cf4eb3e6a535f66c1b3e66399f1ba611 = L.map(
+                "map_cf4eb3e6a535f66c1b3e66399f1ba611",
                 {
                     center: [-14.235, -51.925],
                     crs: L.CRS.EPSG3857,
@@ -63,45 +207,45 @@
 
         
     
-            var tile_layer_31e527727a667e095dc05e0b2ca28f15 = L.tileLayer(
+            var tile_layer_bb756b8a4e330dfd53a7aeb9574b0731 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_31e527727a667e095dc05e0b2ca28f15.addTo(map_54003dc5d185eb401b0214d710a1bfa1);
+            tile_layer_bb756b8a4e330dfd53a7aeb9574b0731.addTo(map_cf4eb3e6a535f66c1b3e66399f1ba611);
         
     
-            var tile_layer_89b98ffe0848284f2f470677029d363c = L.tileLayer(
+            var tile_layer_4f5cf0974d50b9a4715154fda448525a = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_89b98ffe0848284f2f470677029d363c.addTo(map_54003dc5d185eb401b0214d710a1bfa1);
+            tile_layer_4f5cf0974d50b9a4715154fda448525a.addTo(map_cf4eb3e6a535f66c1b3e66399f1ba611);
         
     
-            var tile_layer_7c851f7e8148b1ec6b940635efbb89b4 = L.tileLayer(
+            var tile_layer_efad19a95823444d2c68f92e35e09696 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_7c851f7e8148b1ec6b940635efbb89b4.addTo(map_54003dc5d185eb401b0214d710a1bfa1);
+            tile_layer_efad19a95823444d2c68f92e35e09696.addTo(map_cf4eb3e6a535f66c1b3e66399f1ba611);
         
     
-            var marker_cluster_2b611575471fca2b680e045133e67103 = L.markerClusterGroup(
+            var marker_cluster_cea7b94053a340452716b9101793a215 = L.markerClusterGroup(
                 {}
             );
         
     
-            var circle_marker_24cf2e814acc7a1ce5f98712f0f202b8 = L.circleMarker(
+            var circle_d2d901a2e5291d4be1b8453fa591d584 = L.circle(
                 [-9.6445, -35.7378],
-                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1f77b4", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.269457976459272, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#FFF0F5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFF0F5", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23173.64494114818, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_24cf2e814acc7a1ce5f98712f0f202b8.bindTooltip(
+            circle_d2d901a2e5291d4be1b8453fa591d584.bindTooltip(
                 `<div>
                      Estado: AL<br>Total de Duplicatas: 102
                  </div>`,
@@ -109,13 +253,13 @@
             );
         
     
-            var circle_marker_1770dbe399dadb2208dbf684a86711a6 = L.circleMarker(
+            var circle_1c60848dc0a46f71aef434cb335d2fd3 = L.circle(
                 [-3.0986, -60.0219],
-                {"bubblingMouseEvents": true, "color": "#ff7f0e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.120886021092838, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#FF69B4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF69B4", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20302.215052732096, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_1770dbe399dadb2208dbf684a86711a6.bindTooltip(
+            circle_1c60848dc0a46f71aef434cb335d2fd3.bindTooltip(
                 `<div>
                      Estado: AM<br>Total de Duplicatas: 57
                  </div>`,
@@ -123,13 +267,13 @@
             );
         
     
-            var circle_marker_1cc0142cdcd0438d723e9bba4eefee54 = L.circleMarker(
+            var circle_14611023a7dfa5d64882f6504de51384 = L.circle(
                 [-1.4478, -51.7731],
-                {"bubblingMouseEvents": true, "color": "#2ca02c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.2188758248682006, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#EE82EE", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#EE82EE", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8047.189562170502, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_1cc0142cdcd0438d723e9bba4eefee54.bindTooltip(
+            circle_14611023a7dfa5d64882f6504de51384.bindTooltip(
                 `<div>
                      Estado: AP<br>Total de Duplicatas: 4
                  </div>`,
@@ -137,13 +281,13 @@
             );
         
     
-            var circle_marker_7c686ca50584d4c9baac7f29bc62933f = L.circleMarker(
+            var circle_311ff61642867be707c9a2767a86a0d2 = L.circle(
                 [-12.9714, -38.5014],
-                {"bubblingMouseEvents": true, "color": "#d62728", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d62728", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.376825472993907, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#8B4513", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8B4513", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 35942.06368248477, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_7c686ca50584d4c9baac7f29bc62933f.bindTooltip(
+            circle_311ff61642867be707c9a2767a86a0d2.bindTooltip(
                 `<div>
                      Estado: BA<br>Total de Duplicatas: 1323
                  </div>`,
@@ -151,13 +295,13 @@
             );
         
     
-            var circle_marker_bebdbfbb1b9c605aab8d49796acb626c = L.circleMarker(
+            var circle_940bd81f49a599c22fc7eef12769d495 = L.circle(
                 [-3.7197, -38.5389],
-                {"bubblingMouseEvents": true, "color": "#9467bd", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9467bd", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.26211489513057, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#BA55D3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BA55D3", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 43155.28723782642, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_bebdbfbb1b9c605aab8d49796acb626c.bindTooltip(
+            circle_940bd81f49a599c22fc7eef12769d495.bindTooltip(
                 `<div>
                      Estado: CE<br>Total de Duplicatas: 5602
                  </div>`,
@@ -165,13 +309,13 @@
             );
         
     
-            var circle_marker_9e699a9c7d66cc817ca76d4f1de501d6 = L.circleMarker(
+            var circle_f9c8aa55b6d44f778d7bb665075de3d9 = L.circle(
                 [-19.1953, -40.2927],
-                {"bubblingMouseEvents": true, "color": "#8c564b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c564b", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.636239987688432, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#800080", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#800080", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26590.59996922108, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_9e699a9c7d66cc817ca76d4f1de501d6.bindTooltip(
+            circle_f9c8aa55b6d44f778d7bb665075de3d9.bindTooltip(
                 `<div>
                      Estado: ES<br>Total de Duplicatas: 203
                  </div>`,
@@ -179,13 +323,13 @@
             );
         
     
-            var circle_marker_25241187bcf4817b22436a25a5aa1931 = L.circleMarker(
+            var circle_937d6a85cbb700dee2080aeed3cbe77b = L.circle(
                 [-16.6749, -49.2455],
-                {"bubblingMouseEvents": true, "color": "#e377c2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e377c2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.269457976459272, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23173.64494114818, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_25241187bcf4817b22436a25a5aa1931.bindTooltip(
+            circle_937d6a85cbb700dee2080aeed3cbe77b.bindTooltip(
                 `<div>
                      Estado: GO<br>Total de Duplicatas: 102
                  </div>`,
@@ -193,13 +337,13 @@
             );
         
     
-            var circle_marker_df3c073f60e7cee706ec6346c2e12577 = L.circleMarker(
+            var circle_9d77a4776dbf9a792c5956ac1dfab5a4 = L.circle(
                 [-5.4483, -44.2948],
-                {"bubblingMouseEvents": true, "color": "#7f7f7f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f7f7f", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.8918202981106265, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#CD853F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CD853F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9729.550745276567, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_df3c073f60e7cee706ec6346c2e12577.bindTooltip(
+            circle_9d77a4776dbf9a792c5956ac1dfab5a4.bindTooltip(
                 `<div>
                      Estado: MA<br>Total de Duplicatas: 6
                  </div>`,
@@ -207,13 +351,13 @@
             );
         
     
-            var circle_marker_d4e8b33201874b6e18f9913b8c6ad7d6 = L.circleMarker(
+            var circle_9b714ae12255125f4b94830d2c91b53a = L.circle(
                 [-19.9167, -43.9333],
-                {"bubblingMouseEvents": true, "color": "#bcbd22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bcbd22", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.59159622127229, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#6A5ACD", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6A5ACD", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 41478.99055318072, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_d4e8b33201874b6e18f9913b8c6ad7d6.bindTooltip(
+            circle_9b714ae12255125f4b94830d2c91b53a.bindTooltip(
                 `<div>
                      Estado: MG<br>Total de Duplicatas: 4006
                  </div>`,
@@ -221,13 +365,13 @@
             );
         
     
-            var circle_marker_c3d0186ba78c4480abc76b5599c5ec43 = L.circleMarker(
+            var circle_c8f2fefe4a239423266ccea0d5ec2d13 = L.circle(
                 [-20.9037, -54.9081],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.110696122978827, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17776.740307447068, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_c3d0186ba78c4480abc76b5599c5ec43.bindTooltip(
+            circle_c8f2fefe4a239423266ccea0d5ec2d13.bindTooltip(
                 `<div>
                      Estado: MS<br>Total de Duplicatas: 34
                  </div>`,
@@ -235,13 +379,13 @@
             );
         
     
-            var circle_marker_63713892e9c47d2dc742177b5ab73f16 = L.circleMarker(
+            var circle_4bb78f7fb20706fa51aca0bc2b9965ec = L.circle(
                 [-12.5755, -55.7081],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.2188758248682006, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8047.189562170502, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_63713892e9c47d2dc742177b5ab73f16.bindTooltip(
+            circle_4bb78f7fb20706fa51aca0bc2b9965ec.bindTooltip(
                 `<div>
                      Estado: MT<br>Total de Duplicatas: 4
                  </div>`,
@@ -249,13 +393,13 @@
             );
         
     
-            var circle_marker_adc73d63d738b3da8398ce7c3e01d808 = L.circleMarker(
+            var circle_b1578aaeb9f51f336ea32037c7d23b16 = L.circle(
                 [-2.8278, -53.2193],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.8679744089702925, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#C71585", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C71585", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17169.936022425733, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_adc73d63d738b3da8398ce7c3e01d808.bindTooltip(
+            circle_b1578aaeb9f51f336ea32037c7d23b16.bindTooltip(
                 `<div>
                      Estado: PA<br>Total de Duplicatas: 30
                  </div>`,
@@ -263,13 +407,13 @@
             );
         
     
-            var circle_marker_32bb98b7f00bcc255309df6f4e26cb5e = L.circleMarker(
+            var circle_23e3b7f6421e7f5b0578a78744ab3146 = L.circle(
                 [-6.8825, -35.2042],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.741276056255325, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#DC143C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#DC143C", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26853.19014063831, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_32bb98b7f00bcc255309df6f4e26cb5e.bindTooltip(
+            circle_23e3b7f6421e7f5b0578a78744ab3146.bindTooltip(
                 `<div>
                      Estado: PB<br>Total de Duplicatas: 214
                  </div>`,
@@ -277,13 +421,13 @@
             );
         
     
-            var circle_marker_a4ab7ad36ff8853678178691ca45dfb9 = L.circleMarker(
+            var circle_92a1103f8d7aa6a824e07d33acc5f013 = L.circle(
                 [-8.0543, -35.2042],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.88756538491725, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#FF1493", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF1493", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 39718.91346229312, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_a4ab7ad36ff8853678178691ca45dfb9.bindTooltip(
+            circle_92a1103f8d7aa6a824e07d33acc5f013.bindTooltip(
                 `<div>
                      Estado: PE<br>Total de Duplicatas: 2817
                  </div>`,
@@ -291,13 +435,13 @@
             );
         
     
-            var circle_marker_5488ac6200ddd2dcc27b6eafcd33e42f = L.circleMarker(
+            var circle_817e21365a62ae58e15a064ae7dafd29 = L.circle(
                 [-5.0901, -42.8153],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.248035012374677, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#F0E68C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F0E68C", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28120.087530936693, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_5488ac6200ddd2dcc27b6eafcd33e42f.bindTooltip(
+            circle_817e21365a62ae58e15a064ae7dafd29.bindTooltip(
                 `<div>
                      Estado: PI<br>Total de Duplicatas: 276
                  </div>`,
@@ -305,13 +449,13 @@
             );
         
     
-            var circle_marker_413b7b85c82b9fb438d9969dbc3e6b28 = L.circleMarker(
+            var circle_e14329e8ebd7bdf997974511782033a6 = L.circle(
                 [-25.4278, -51.9253],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.875503299472802, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#FAFAD2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FAFAD2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 32188.758248682007, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_413b7b85c82b9fb438d9969dbc3e6b28.bindTooltip(
+            circle_e14329e8ebd7bdf997974511782033a6.bindTooltip(
                 `<div>
                      Estado: PR<br>Total de Duplicatas: 624
                  </div>`,
@@ -319,13 +463,13 @@
             );
         
     
-            var circle_marker_a51266ef1283fb192285d394169c988d = L.circleMarker(
+            var circle_7cb31028687bd4deb682bb7b704dd9d1 = L.circle(
                 [-22.9083, -43.1828],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.391597834116983, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#800000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#800000", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33478.99458529246, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_a51266ef1283fb192285d394169c988d.bindTooltip(
+            circle_7cb31028687bd4deb682bb7b704dd9d1.bindTooltip(
                 `<div>
                      Estado: RJ<br>Total de Duplicatas: 808
                  </div>`,
@@ -333,13 +477,13 @@
             );
         
     
-            var circle_marker_3b362f09ca9f1f0e418e6187b6024d91 = L.circleMarker(
+            var circle_e728235b159b363c6c5b5782a719ca15 = L.circle(
                 [-5.8142, -35.2042],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.226256212776141, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#FF8C00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF8C00", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28065.640531940353, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_3b362f09ca9f1f0e418e6187b6024d91.bindTooltip(
+            circle_e728235b159b363c6c5b5782a719ca15.bindTooltip(
                 `<div>
                      Estado: RN<br>Total de Duplicatas: 273
                  </div>`,
@@ -347,13 +491,13 @@
             );
         
     
-            var circle_marker_4213a8ee789a6ed5536a802ce9993d9a = L.circleMarker(
+            var circle_a8f6c130ee88dc7234707c7c312da7a0 = L.circle(
                 [-30.0333, -51.2167],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.492406381080306, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#00FA9A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FA9A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28731.015952700764, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_4213a8ee789a6ed5536a802ce9993d9a.bindTooltip(
+            circle_a8f6c130ee88dc7234707c7c312da7a0.bindTooltip(
                 `<div>
                      Estado: RS<br>Total de Duplicatas: 312
                  </div>`,
@@ -361,13 +505,13 @@
             );
         
     
-            var circle_marker_be20920a9480b562dd7296e2d748e662 = L.circleMarker(
+            var circle_ebd0714a0da29359332f61914b558e57 = L.circle(
                 [-27.595, -48.549],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.3387000333412, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#00FFFF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FFFF", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 35846.750083353, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_be20920a9480b562dd7296e2d748e662.bindTooltip(
+            circle_ebd0714a0da29359332f61914b558e57.bindTooltip(
                 `<div>
                      Estado: SC<br>Total de Duplicatas: 1298
                  </div>`,
@@ -375,13 +519,13 @@
             );
         
     
-            var circle_marker_9f0e8a353724f9f9fd5cb47357218edb = L.circleMarker(
+            var circle_440218ead14130be2b04768e66062192 = L.circle(
                 [-10.8925, -37.0833],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.793897205242027, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#6A5ACD", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6A5ACD", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36984.74301310507, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_9f0e8a353724f9f9fd5cb47357218edb.bindTooltip(
+            circle_440218ead14130be2b04768e66062192.bindTooltip(
                 `<div>
                      Estado: SE<br>Total de Duplicatas: 1630
                  </div>`,
@@ -389,13 +533,13 @@
             );
         
     
-            var circle_marker_7d41792ea6856644b11e32d6420bcd21 = L.circleMarker(
+            var circle_e4776588417069f9cdfde12e34b9c25e = L.circle(
                 [-23.5505, -46.6333],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.943748932702466, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#191970", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#191970", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 59859.37233175617, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_7d41792ea6856644b11e32d6420bcd21.bindTooltip(
+            circle_e4776588417069f9cdfde12e34b9c25e.bindTooltip(
                 `<div>
                      Estado: SP<br>Total de Duplicatas: 158240
                  </div>`,
@@ -403,13 +547,13 @@
             );
         
     
-            var circle_marker_59f868fdea4d76b90f11c1b153f5fc8c = L.circleMarker(
+            var circle_9be835cfff968e97b1e0fd02033e33ea = L.circle(
                 [-9.5378, -48.3328],
-                {"bubblingMouseEvents": true, "color": "#17becf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.568379267836522, "stroke": true, "weight": 3}
-            ).addTo(marker_cluster_2b611575471fca2b680e045133e67103);
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18920.948169591305, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_cea7b94053a340452716b9101793a215);
         
     
-            circle_marker_59f868fdea4d76b90f11c1b153f5fc8c.bindTooltip(
+            circle_9be835cfff968e97b1e0fd02033e33ea.bindTooltip(
                 `<div>
                      Estado: TO<br>Total de Duplicatas: 43
                  </div>`,
@@ -417,24 +561,24 @@
             );
         
     
-            marker_cluster_2b611575471fca2b680e045133e67103.addTo(map_54003dc5d185eb401b0214d710a1bfa1);
+            marker_cluster_cea7b94053a340452716b9101793a215.addTo(map_cf4eb3e6a535f66c1b3e66399f1ba611);
         
     
-            var layer_control_a9c35b6ddc2fcbca42dfa9599c692e7b_layers = {
+            var layer_control_d92e54150ab570f4ebb5a5ec202f632d_layers = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_31e527727a667e095dc05e0b2ca28f15,
-                    "Esri Satellite with Labels" : tile_layer_89b98ffe0848284f2f470677029d363c,
+                    "openstreetmap" : tile_layer_bb756b8a4e330dfd53a7aeb9574b0731,
+                    "Esri Satellite with Labels" : tile_layer_4f5cf0974d50b9a4715154fda448525a,
                 },
                 overlays :  {
-                    "World StreetMap" : tile_layer_7c851f7e8148b1ec6b940635efbb89b4,
-                    "macro_element_2b611575471fca2b680e045133e67103" : marker_cluster_2b611575471fca2b680e045133e67103,
+                    "World StreetMap" : tile_layer_efad19a95823444d2c68f92e35e09696,
+                    "macro_element_cea7b94053a340452716b9101793a215" : marker_cluster_cea7b94053a340452716b9101793a215,
                 },
             };
-            let layer_control_a9c35b6ddc2fcbca42dfa9599c692e7b = L.control.layers(
-                layer_control_a9c35b6ddc2fcbca42dfa9599c692e7b_layers.base_layers,
-                layer_control_a9c35b6ddc2fcbca42dfa9599c692e7b_layers.overlays,
+            let layer_control_d92e54150ab570f4ebb5a5ec202f632d = L.control.layers(
+                layer_control_d92e54150ab570f4ebb5a5ec202f632d_layers.base_layers,
+                layer_control_d92e54150ab570f4ebb5a5ec202f632d_layers.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_54003dc5d185eb401b0214d710a1bfa1);
+            ).addTo(map_cf4eb3e6a535f66c1b3e66399f1ba611);
 
         
 </script>
