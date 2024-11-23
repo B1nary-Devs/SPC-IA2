@@ -2,4 +2,6 @@ venv
 /venv
 .venv
 
+node_modules
+
 table_values_csv.csv
