@@ -8,3 +8,5 @@ asset_trade_bills.csv
 participants.csv
 estado_clusters.csv
 estado_lat_lon_duplicatas.csv
+node_modules
+
