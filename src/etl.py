@@ -120,3 +120,23 @@ df['periodo'] = df['mes'].map(meses)
 
 nome_arquivo = 'data/asset_trade_bills.csv'
 df.to_csv(nome_arquivo, index=False)
+
+# %% 
+novo_df = df.groupby('sigla_estado').agg(
+    total_duplicatas=('sigla_estado', 'size')
+).reset_index()
+
+novo_df['latitude'] = novo_df['sigla_estado'].apply(lambda x: estado_coords.get(x, (None, None))[0])
+novo_df['longitude'] = novo_df['sigla_estado'].apply(lambda x: estado_coords.get(x, (None, None))[1])
+
+novo_arquivo_csv = 'data/estado_lat_lon_duplicatas.csv'
+novo_df.to_csv(novo_arquivo_csv, index=False)
+
+print(f"Novo arquivo criado: {novo_arquivo_csv}")
+
+# %%
+de = pd.read_csv('data/estado_lat_lon_duplicatas.csv')
+# %%
+de.describe()
+de.head(10)
+# %%
